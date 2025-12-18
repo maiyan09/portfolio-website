@@ -1,0 +1,323 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+/* font-family: "Boldonse", system-ui; */
+/* font-family: "Ubuntu", sans-serif;  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+body {
+    background-image: url(images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nev-logo img {
+    filter: invert();
+}
+.nev {
+    height: 70px;
+    width: 100%;
+    color: white;
+    background-color: #0d1018;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position:fixed;
+    z-index: 5;
+}
+    /* NEV LOGO START HERE */
+.nev-logo img {
+    height: 10rem;
+    width: 10rem;
+}
+/* NEV LOGO ENDS HERE */
+
+    /* NEV ABOUT SECTION START HERE  */
+.nev-about-section {
+    height: 60px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.para::after {
+    content: '';
+    height: 45px;
+    width: 94px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: -1;
+    transform: scale(0);
+    background-color: #270D15;
+    transition: 0.3s;
+}
+.para:hover::after {
+    transform: scale(1);
+    background-color: #270D15;
+}
+.nev-about-section p:hover {
+    color: tomato;
+}
+.nev-about-section p {
+    font-size: 1.4rem;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    height: 60px;
+    width: 90px;
+    position: relative;
+    z-index: 1;
+}
+/* NEV ABOUT SECTION ENDS HERE  */
+
+    /* SOCIAL MEDIA ICON PART START HERE  */
+.nev-social-media {
+    height: 100%;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#circle {
+    height: 55px;
+    width: 55px;
+    align-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.062745098);
+}
+.nev-social-media i {
+    font-size: 1.6rem;
+}
+#circle:hover {
+    /* background-color: rgba(0, 0, 0, 0.178); */
+    background-color: #FF014F;
+}
+/* SOCIAL MEDIA ICON PART ENDS HERE */
+    /* HEAD-BODY START HERE LEFT/RIGHT */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.info-left {
+    padding-left: 20PX;
+}
+.info-left h3 {
+    font-size: 3rem;
+}
+.info-left h1 {
+    font-size: 4.3rem;
+}
+span {
+    color: #EBF4DD;
+    background: #3b4953;
+}
+.info-left p {
+    font-size: 1.7rem;
+}
+.info-right {
+    height: auto;
+    position: relative;
+}
+.info-right img {
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+.info-right p {
+    color:#EBF4DD;
+    text-shadow: 0 5px 50px rgba(11, 142, 236, 0.7);
+    position: absolute;
+    right: 40px;
+    top: 280px;
+    font-size: 5.5rem;
+    font-family: "Boldonse", system-ui;
+    z-index: 1;
+    animation: upDown 4s linear infinite;
+}
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* HEAD-BODY ENDS HERE LEFT/RIGHT */
+
+    /* MAIN/HERO PART START HERE */
+main {
+    height: 50vh;
+    background-color: #060606;   
+}
+.smoothAnimation { /*FOR SCROLLING ANIMATION*/
+    animation: smooth linear;
+    animation-timeline: view(); /*ANIMATION START WHEN CARD APPEAR TO THE SCREEN*/
+    animation-range: entry 0% cover 40%;
+}
+main h1 {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: "Ubuntu", system-ui;
+}
+.card {
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-1 {
+    height: 165px;
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: conic-gradient(aqua, green, blue, aqua);
+    position: relative;
+    z-index: 1;
+}
+.card-1:hover {
+    background-image: conic-gradient(from 180deg,blue,aqua, aqua, blue);
+    color:#FF014F ;
+}
+.card-1::before {
+    content: '';
+    height: 160px;
+    width: 290px;
+    top: -5;
+    background-color: #141414;
+    position: absolute;
+    z-index: -1;
+}
+.card-1 h2 {
+    font-family: "Ubuntu";
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+.card-1 p {
+    font-family: "Ubuntu";
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+@keyframes smooth { /*FOR SCROLLING ANIMATION*/
+    from {
+        opacity: 0;
+        scale: 0.7;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+/* MAIN/HERO PART START HERE */
+
+    /* PROJECTS DEMO START HERE  */
+#project-demo {
+    height: 180vh;
+    color: #CCD6F6 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5rem;
+    background-image: url(images/Background.png);
+}
+.project-1 {
+    height: 350px;
+    width: 70%;
+    border: 1px solid #CCD6F6;
+    position: relative;
+    animation: projectAnim linear;
+    animation-timeline: view(); /*ANIMATION START WHEN CARD APPEAR TO THE SCREEN*/
+    animation-range: entry 0% cover 40%;
+}
+.project-1 h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+}
+.box {
+    height: 150px;
+    width: 650px;
+    background-image: url(images/Box.png);
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    z-index: 1;
+}
+.box p{
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+.project-1 img{
+    height: 350px;
+    width: 50%;
+    box-shadow: -35px 0px 5px #2B0B3A;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+@keyframes projectAnim{
+    from{
+        scale: (0);
+        transform: translateX(-200px);
+    }
+    to{
+        scale: (1);
+        transform: translateX(0);
+    }
+}
+/* FOOTER START HERE */
+footer {
+    height: 30vh;
+    color: white;
+    background-color: #060606;
+}
+footer h1 {
+    padding: 20px;
+}
+.contact-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.contact {
+    display: flex;
+    gap: 20px;
+}
+.contact i {
+    font-size: 2rem;
+}
+/* FOOTER ENDS HERE */
