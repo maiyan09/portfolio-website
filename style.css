@@ -147,7 +147,7 @@ span {
     position: absolute;
     right: 40px;
     top: 280px;
-    font-size: 5.3rem;
+    font-size: 5.2rem;
     font-family: "Boldonse", system-ui;
     z-index: 1;
     animation: upDown 4s linear infinite;
@@ -253,7 +253,7 @@ main h1 {
 }
 .project-1 {
     height: 350px;
-    width: 70%;
+    width: 80%;
     border: 1px solid #CCD6F6;
     position: relative;
     animation: projectAnim linear;
@@ -320,5 +320,4 @@ footer h1 {
 .contact i {
     font-size: 2rem;
 }
-
 /* FOOTER ENDS HERE */
